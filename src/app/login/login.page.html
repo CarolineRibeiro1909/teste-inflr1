@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Login
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<h1 class="texto">Entrar na Inflr</h1>
+		<ion-card-content>
+			<ion-list no-line>
+				<ion-item>
+					<ion-input type="text" [(ngModel)]="username" placeholder="Usuário"></ion-input>
+				</ion-item>
+				<br>
+				<ion-item>
+					<ion-input type="password" [(ngModel)]="password" placeholder="Senha">
+					</ion-input>
+				</ion-item>
+				<br>
+				<ion-button icon-left block color="primary" (click)="login()" class="login-but">
+					<ion-icon name="log-in"></ion-icon> Entrar
+				</ion-button>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar color="primary">
+		<ion-title></ion-title>
+	</ion-toolbar>
+</ion-footer>

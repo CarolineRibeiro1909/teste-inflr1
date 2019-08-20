@@ -1,0 +1,38 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>
+			Criar Conta
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+		<br><br>
+		<ion-card-title class="texto">Crie sua Conta</ion-card-title>
+		<ion-card>
+			<ion-input type="text" [(ngModel)]="firstname" placeholder="Nome"></ion-input>
+		</ion-card>
+
+		<ion-card>
+			<ion-input type="text" [(ngModel)]="lastname" placeholder="Sobrenome"></ion-input>
+		</ion-card>
+
+		<ion-card>
+			<ion-input type="text" [(ngModel)]="username" placeholder="Nome de Usuário"></ion-input>
+		</ion-card>
+
+		<ion-card>
+			<ion-input type="number" [(ngModel)]="password" placeholder="Senha"></ion-input>
+		</ion-card>
+		<br><br>
+
+		<ion-button color="primary" (click)="createUser()">Cadastrar</ion-button>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar color="primary">
+		<ion-title></ion-title>
+	</ion-toolbar>
+</ion-footer>

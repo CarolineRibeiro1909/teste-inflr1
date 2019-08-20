@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Post
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="username != ''">
+        <ion-card class="welcome-card">
+            <ion-card-content>
+                <ion-card-header>
+                    <ion-card-title>Post aqui...</ion-card-title>
+                </ion-card-header>
+                <ion-card color="light">
+                    <ion-item>
+                        <ion-input type="text" [(ngModel)]="title" placeholder="Título"></ion-input>
+                    </ion-item>
+                    <br>
+                    <ion-item>
+                        <ion-input type="text" [(ngModel)]="shortcontent" placeholder="Breve descrição"></ion-input>
+                    </ion-item>
+                    <br>
+                    <ion-item>
+                        <ion-input type="text" [(ngModel)]="content" placeholder="Conteúdo"></ion-input>
+                    </ion-item>
+                    <br>
+                </ion-card>
+                <ion-icon name="heart" color="danger"></ion-icon>
+                <ion-icon name="logo-twitter" color="primary"></ion-icon>
+                <ion-icon name="thumbs-up" color="primary"></ion-icon>
+                <ion-button (click)="save()" class="right">Entrar</ion-button>
+                <br><br>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <ion-list>
+        <ion-item-sliding *ngFor="let artigo of articles">
+            <ion-card>
+                <ion-icon name="more" class="right" size="50"></ion-icon><br><br>
+                <img src="./assets/madison.jpg" />
+                <ion-card-header>
+                    <ion-card-subtitle>{{ artigo.title }}
+                    </ion-card-subtitle>
+                    <ion-card-title>{{artigo.short_content}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    {{artigo.content}}<br><br>
+                    <ion-icon name="logo-twitter" item-start color="primary"></ion-icon>
+                    Seguidores
+                    <ion-badge item-end>260k</ion-badge><br><br>
+                    <ion-card-subtitle>
+                        <ion-icon name="time"></ion-icon> 5 horas atrás
+                    </ion-card-subtitle>
+                    <ion-icon name="thumbs-up" item-start class="right" color="primary">Like</ion-icon>
+                    <br>
+                </ion-card-content>
+            </ion-card>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="primary">
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-footer>
